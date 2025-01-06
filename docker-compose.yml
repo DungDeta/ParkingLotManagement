@@ -1,0 +1,11 @@
+services:
+  django:
+    build: .
+    container_name: ParkingLotManagement_API
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/ParkingLotManagement
+    ports:
+      - "8000:8000"

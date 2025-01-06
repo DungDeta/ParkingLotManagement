@@ -26,7 +26,7 @@ class Vehicle(models.Model):
 class User(models.Model):
     user_rf_id = models.CharField(max_length=20, verbose_name="RFID", primary_key=True)
     user_name = models.CharField(max_length=20, verbose_name="Tên")
-    vehicle_fee= models.FloatField(default=3000, verbose_name="Phí đỗ")
+    vehicle_fee= models.FloatField(default=0, verbose_name="Phí đỗ")
     user_contact = models.CharField(max_length=20, verbose_name="Số điện thoại")
 
     class Meta:
